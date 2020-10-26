@@ -9,8 +9,8 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = ExisteStringValidator.class)
-public @interface ExisteString {
+@Constraint(validatedBy = AtributoUnicoValidator.class)
+public @interface AtributoUnico {
 
     String message() default "já existe no banco de dados";
 

@@ -1,6 +1,6 @@
-package br.com.itau.mercadolivre.model;
+package br.com.itau.mercadolivre.novousuario.model;
 
-import br.com.itau.mercadolivre.validator.ExisteString;
+import br.com.itau.mercadolivre.validator.AtributoUnico;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -11,7 +11,7 @@ public class UsuarioRequest {
 
     @NotBlank
     @Email
-    @ExisteString(nomeAtributo = "login", classeDominio = Usuario.class)
+    @AtributoUnico(nomeAtributo = "login", classeDominio = Usuario.class)
     private final String login;
     @NotBlank
     @Length(min = 6, message = "deve ter no mínimo 6 caracteres")

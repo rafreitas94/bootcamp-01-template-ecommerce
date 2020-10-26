@@ -1,7 +1,7 @@
-package br.com.itau.mercadolivre.controller;
+package br.com.itau.mercadolivre.novousuario.controller;
 
-import br.com.itau.mercadolivre.model.Usuario;
-import br.com.itau.mercadolivre.model.UsuarioRequest;
+import br.com.itau.mercadolivre.novousuario.model.Usuario;
+import br.com.itau.mercadolivre.novousuario.model.UsuarioRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

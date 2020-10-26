@@ -7,7 +7,7 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.List;
 
-public class ExisteStringValidator implements ConstraintValidator<ExisteString, String> {
+public class AtributoUnicoValidator implements ConstraintValidator<AtributoUnico, String> {
 
     @PersistenceContext
     private EntityManager manager;
@@ -16,7 +16,7 @@ public class ExisteStringValidator implements ConstraintValidator<ExisteString, 
     private Class<?> classeDominio;
 
     @Override
-    public void initialize(ExisteString constraintAnnotation) {
+    public void initialize(AtributoUnico constraintAnnotation) {
         nomeAtributo = constraintAnnotation.nomeAtributo();
         classeDominio = constraintAnnotation.classeDominio();
     }

@@ -1,4 +1,4 @@
-package br.com.itau.mercadolivre.model;
+package br.com.itau.mercadolivre.novousuario.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.validator.constraints.Length;
@@ -20,12 +20,16 @@ public class Usuario {
     private Long id;
     @NotBlank
     @Email
-    private final String login;
+    private String login;
     @NotEmpty
     @Length(min = 6)
-    private final String senha;
+    private String senha;
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss", shape = JsonFormat.Shape.STRING)
     private final LocalDateTime instanteCadastrado = LocalDateTime.now();
+
+    @Deprecated
+    public Usuario() {
+    }
 
     public Usuario(@NotBlank @Email String login, @NotEmpty @Length(min = 6) String senha) {
         this.login = login;
